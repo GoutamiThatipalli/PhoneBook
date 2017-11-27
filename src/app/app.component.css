@@ -1,0 +1,15 @@
+.vertical-menu {
+    background-color: #eee;
+    height: 500px;
+}
+.vertical-menu #bttn,#bttn1 {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+.display{
+    padding-top: 65px;
+    padding-left: 60px;
+}

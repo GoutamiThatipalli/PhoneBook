@@ -1,0 +1,5 @@
+<div id="display" class="card container" *ngFor="let obj of arr">
+    <h4><b>{{obj.username}}</b></h4> 
+    <p>{{obj.designation}}   | <span *ngFor= "let obj1 of obj.mobile" >{{obj1.mobile}}</span>     |   {{obj.city}}</p>
+    <p>{{obj.email}}   |   {{obj.empid}} </p>
+</div>

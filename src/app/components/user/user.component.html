@@ -1,0 +1,24 @@
+<div id="register">
+        <form class="register-form" [formGroup]="form" (ngSubmit)="onSubmit(form.value)"  >
+        <h1 class="text-primary">Register yourself!</h1><br/>
+		<input type="text" name="username"  class="form-control" placeholder="Type your Name" required autofocus formControlName="username"><br/>
+        <input type="text" name="designation" formControlName="designation" class="form-control" placeholder="Type your designation"><br/>
+   <div class="input-group">
+    <div formArrayName="mobile">
+        <div *ngFor="let app-add-mobileno of form.controls.mobile.controls; let i=index" > 
+          <div>
+            <app-add-mobileno [group] ="form.controls.mobile.controls[i]"></app-add-mobileno>
+          </div>
+        </div>
+    </div>
+    <span id="add" class="input-group-addon btn" (click)="onAddProperty()">+</span>
+    </div><br/>
+        <input type="email" formControlName="email" name="email" class="form-control" placeholder="Type your emailid" ><br/>
+        <input type="text" name="city" formControlName="city" class="form-control" placeholder="Type your City"  ><br/>
+        <input type="text" name="empid" formControlName="empid" class="form-control" placeholder="Type your empid"  ><br/>
+        <input type="submit" class="btn btn-primary btn-block" value="Signup">
+        </form>
+</div>
+
+
+
